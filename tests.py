@@ -1,6 +1,5 @@
 import torch
-from optim_v3 import EMLYN
-from optim import Ranger
+from optim import EMLYN
 
 def rosenbrock(tensor):
 	x, y = tensor
@@ -41,4 +40,4 @@ def optimize_other(optim):
 		print(y.clone().detach().numpy())
 
 
-optimize_other(Ranger)
+optimize_other(torch.optim.Adam)
